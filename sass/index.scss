@@ -13,6 +13,10 @@ p {
     margin: 0;
 }
 
+section {
+    padding: 60px 0;
+}
+
 /* Header */
 // Extend for btn
 %extend-btn{
@@ -126,8 +130,101 @@ header {
 /* About Section */
 main {
     .about {
+        .section-heading {
+            h4 {
+                text-transform: uppercase;
+                color: #101d2c;
+                line-height: 0;
+                font-family: 'Teko', sans-serif;
+                font-weight: 300;
+                letter-spacing: 1px;
+            }
+            h1 {
+                font-family: 'Niconne', cursive;
+                color: #c69963;
+            }
+        }
         .btn {
             @extend %extend-btn;
+            width: 150px;
+            color: #c69963 !important;
+            &:hover {
+                color: #fff !important;
+                background-color: #c69963;
+            }
         }
     }
+}
+
+/* Media Query */
+@media (min-width: 576px) {
+    .navbar-brand {
+        max-width: 150px !important;
+    }
+    .hamburger-menu {
+        top: 35px !important;
+        right: 25px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .btn {
+        width: 150px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    header {
+        .container {
+            padding: 0 15px !important;
+            nav {
+                .nav-list {
+                    position: initial;
+                    width: initial;
+                    height: initial;
+                    background-color: initial;
+                    flex-direction: row;
+                    opacity: 1;
+                    visibility: visible;
+                    transform: initial;
+                    transition: initial;
+                    margin: 0;
+                    padding: 0;
+                    .nav-item {
+                        margin: 0 30px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                    .nav-link {
+                        position: relative;
+                        padding: 0;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            background-color: #c69963;
+                            bottom: -3px;
+                            width: 100%;
+                            height: 3px;
+                            transform: scaleX(0);
+                            transform-origin: center;
+                            transition: 650ms;
+                        }
+                        &:hover::before {
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+        }
+        .hamburger-menu {
+            display: none !important;
+        }
+        .navbar-brand {
+            position: initial !important;
+            transform: initial !important;
+        }
+        
+    } 
 }
