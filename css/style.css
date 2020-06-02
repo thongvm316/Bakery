@@ -10,7 +10,7 @@ a {
 }
 
 p {
-  margin: 0;
+  margin: 0 !important;
 }
 
 section {
@@ -18,7 +18,7 @@ section {
 }
 
 /* Header */
-main .about .btn, header .container .hero-text .btn {
+.menu .menu-item-desc .btn, .about .btn, header .container .hero-text .btn {
   width: 100px;
   padding: 5px 0;
   border: 1px solid #c69963;
@@ -122,7 +122,7 @@ header .container .hero-text .btn:hover::before {
 }
 
 /* About Section */
-main .about .section-heading h4 {
+.menu .section-heading h4, .about .section-heading h4 {
   text-transform: uppercase;
   color: #101d2c;
   line-height: 0;
@@ -130,15 +130,44 @@ main .about .section-heading h4 {
   font-weight: 300;
   letter-spacing: 1px;
 }
-main .about .section-heading h1 {
+.menu .section-heading h1, .about .section-heading h1 {
   font-family: "Niconne", cursive;
   color: #c69963;
 }
-main .about .btn {
+
+.about .btn {
   width: 150px;
   color: #c69963 !important;
 }
-main .about .btn:hover {
+.about .btn:hover {
+  color: #fff !important;
+  background-color: #c69963;
+}
+
+/* Menu Section */
+.menu {
+  background-color: #101d2c;
+}
+.menu .shop-info i {
+  color: #c69963;
+  font-size: 50px;
+}
+.menu .shop-info h1 {
+  font-family: "Teko", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.menu .shop-info p, .menu .shop-info address {
+  color: rgba(255, 255, 255, 0.5);
+}
+.menu hr {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.menu .menu-item-desc .btn {
+  color: #c69963 !important;
+}
+.menu .menu-item-desc .btn:hover {
   color: #fff !important;
   background-color: #c69963;
 }
