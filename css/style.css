@@ -164,12 +164,44 @@ header .container .hero-text .btn:hover::before {
 .menu hr {
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
+.menu .menu-item-desc {
+  padding: 50px 10px;
+  color: #212529;
+  margin: auto;
+}
+.menu .menu-item-desc h6 {
+  color: #c69963;
+  font-size: 20px;
+}
+.menu .menu-item-desc h1 {
+  color: #101d2c;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-family: "Teko", sans-serif;
+  font-weight: 300;
+}
 .menu .menu-item-desc .btn {
   color: #c69963 !important;
 }
 .menu .menu-item-desc .btn:hover {
   color: #fff !important;
   background-color: #c69963;
+}
+.menu .point-left, .menu .point-right {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+}
+.menu .point-left::before, .menu .point-right::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: 1;
 }
 
 /* Media Query */
@@ -181,6 +213,10 @@ header .container .hero-text .btn:hover::before {
   .hamburger-menu {
     top: 35px !important;
     right: 25px !important;
+  }
+
+  .point-left::before, .point-right::before {
+    display: none !important;
   }
 }
 @media (min-width: 768px) {

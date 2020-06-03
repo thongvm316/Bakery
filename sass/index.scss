@@ -183,6 +183,20 @@ header {
         @extend %extend-section-heading;
     }
     .menu-item-desc {
+        padding: 50px 10px;
+        color: #212529;
+        margin: auto;
+        h6 {
+            color: #c69963;
+            font-size: 20px;
+        }
+        h1 {
+            color: #101d2c;
+            font-size: 30px;
+            letter-spacing: 1px;
+            font-family: 'Teko', sans-serif;
+            font-weight: 300;
+        }
         .btn {
             @extend %extend-btn;
             color: #c69963 !important;
@@ -191,6 +205,22 @@ header {
                 background-color: #c69963;
             }
         }
+    }
+    .point-left, .point-right {
+        position: relative;
+        background-color: #fff;
+        display: flex;
+    }
+    .point-left::before, .point-right::before {
+        content: "";
+        position: absolute;
+        width: 25px; 
+        height: 25px;
+        background-color: #fff;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        z-index: 1;
     }
 }
 
@@ -208,6 +238,9 @@ header {
     .hamburger-menu {
         top: 35px !important;
         right: 25px !important;
+    }
+    .point-left::before, .point-right::before {
+        display: none !important;
     }
 }
 
