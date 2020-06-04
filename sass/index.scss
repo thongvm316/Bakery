@@ -198,6 +198,7 @@ header {
             font-weight: 300;
         }
         .btn {
+            margin-top: .7rem;
             @extend %extend-btn;
             color: #c69963 !important;
             &:hover {
@@ -224,6 +225,30 @@ header {
     }
 }
 
+/* Chef Section */
+.chef {
+    .section-heading {
+        @extend %extend-section-heading;
+    }
+    .card-body {
+        h1 {
+            font-size: 25px;
+            letter-spacing: 1px;
+            font-family: 'Teko', sans-serif;
+            font-weight: 300;
+        }
+        h6 {
+            font-size: 16px;
+            color: #c69963;
+        }
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #101d2c;
+    color: rgba(255,255,255,.5);
+}
 
 
 
@@ -304,4 +329,12 @@ header {
         }
         
     } 
+}
+
+@media (min-width: 1200px) {
+    .menu-item-desc{
+        p {
+            display: none;
+        }
+    }
 }
